@@ -1,0 +1,14 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/jshdhsjjshsh/Exx/bb0612d847279600c4e9d26f25677e27daaa6ad2/%D0%A4%D0%B5%D1%85%20%D1%85%D0%B0%D0%B1%20%D0%B0%D0%B2%D1%82%D0%BE%20%D0%B2%D0%BE%D0%B4%20%D0%BA%D0%BE%D0%B4%D0%BE%D0%B2"))()
+task.wait(0.5)
+local function r() 
+    local a=game:GetService("CoreGui"):FindFirstChild("FexHUB_TopBar")or game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("FexHUB_TopBar")
+    if a then a:Destroy() end
+end
+r()
+local function w()
+    local c=game:GetService("Players").LocalPlayer.PlayerGui.DescendantAdded:Connect(function(d)
+        if d.Name=="FexHUB_TopBar" then d:Destroy() end
+    end)
+    task.delay(10,function() c:Disconnect() end)
+end
+w()
