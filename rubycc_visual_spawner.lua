@@ -11137,7 +11137,7 @@ task.spawn(function()
             if mdl and mdl.Parent then _syncModelAnimations(mdl) end
         end
     end
-end)
+end
 
 end
 _buildAndRun()
